@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+
+      <!-- Logo y nombre de la página -->
+      <a href="../index.html" class="brand">
+        <i class="fa-solid fa-shield-heart"></i>
+        <span>VaxiCare</span>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav class="nav-links">
+
+        <!-- Enlaces entre páginas -->
+        <a href="../index.html">Inicio</a>
+        <a href="historial.html">Historial</a>
+        <a href="recordatorios.html">Recordatorios</a>
+        <a href="vacunas.html">Vacunas</a>
+
+        <!-- La clase active marca la página actual -->
+        <a class="active" href="contacto.html">Contacto</a>
+      </nav>
+
+      <!-- Botón para cambiar el tema oscuro/claro -->
+      <button class="theme-btn" id="themeBtn">
+
+        <!-- Icono de luna -->
+        <i class="fa-solid fa-moon"></i>
+
+        <!-- Texto del botón -->
+        <span> Modo</span>
+      </button>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-layout page-layout">
+
+      <!-- Tarjeta principal con efecto glass -->
+      <section class="glass-card contact-section">
+
+        <!-- Encabezado de la sección -->
+        <div>
+
+          <!-- Etiqueta decorativa -->
+          <span class="tag">
+            <i class="fa-solid fa-headset"></i>
+            Soporte
+          </span>
+
+          <!-- Título principal -->
+          <h1 class="page-title">Contacto y soporte</h1>
+
+          <!-- Descripción pequeña -->
+          <p class="page-description">
+            Formulario simulado con DOM.
+          </p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form class="contact-form" id="contactForm">
+
+          <!-- Campo para escribir el nombre -->
+          <label>
+            Nombre
+
+            <input
+              type="text"
+              id="nameInput"
+              placeholder="Usuario"
+              required
+            />
+          </label>
+
+          <!-- Campo para escribir correo -->
+          <label>
+            Correo
+
+            <input
+              type="email"
+              placeholder="usuario@correo.com"
+              required
+            />
+          </label>
+
+          <!-- Área para escribir mensaje -->
+          <label>
+            Mensaje
+
+            <textarea
+              placeholder="Escribe tu mensaje..."
+              required
+            ></textarea>
+          </label>
+
+          <!-- Botón para enviar -->
+          <button class="btn btn-primary" type="submit">
+
+            <!-- Texto del botón -->
+            Enviar mensaje
+
+            <!-- Icono de avión -->
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <!-- Aquí aparecerá el mensaje generado con JS -->
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Botón flotante de soporte -->
+    <a href="contacto.html" class="support-btn">
+      <i class="fa-solid fa-headset"></i>
+      Soporte
+    </a>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>Cartilla de Vacunación Digital · PROPOINT</p>
+    </footer>
+
+    <!-- Archivo donde están los datos simulados -->
+    <script src="../js/data.js"></script>
+
+    <!-- JS principal de la página -->
+    <script src="../js/app.js"></script>
+
+    <!-- JS específico del formulario de contacto -->
+    <script src="../js/contacto.js"></script>
+
+  </body>
+</html>

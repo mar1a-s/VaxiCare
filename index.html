@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>VaxiCare</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Model Viewer -->
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+  ></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <a href="index.html" class="brand">
+      <i class="fa-solid fa-shield-heart"></i>
+      <span>VaxiCare</span>
+    </a>
+
+    <!-- BOTON MENU -->
+    <button class="menu-toggle" id="menuToggle" type="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- LINKS -->
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="pages/historial.html">Historial</a>
+      <a href="pages/recordatorios.html">Recordatorios</a>
+      <a href="pages/vacunas.html">Vacunas</a>
+      <a href="pages/contacto.html">Contacto</a>
+    </nav>
+
+    <!-- BOTON TEMA -->
+    <button class="theme-btn" id="themeBtn" type="button">
+      <i class="fa-solid fa-moon"></i>
+      <span>Modo</span>
+    </button>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-layout">
+
+    <!-- HERO -->
+    <section class="hero glass-card">
+
+      <div class="hero-content">
+
+        <span class="tag">
+          <i class="fa-solid fa-heart-pulse"></i>
+          Protección · Prevención · Salud
+        </span>
+
+        <h1>
+          Cartilla de
+          <span>Vacunación Digital</span>
+        </h1>
+
+        <p>
+          Plataforma web para registrar, consultar y dar seguimiento
+          al historial de vacunas de un usuario, con recordatorios
+          y una interfaz moderna, clara y fácil de utilizar.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="btn btn-primary" href="pages/historial.html">
+            Ver historial
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="pages/recordatorios.html">
+            Próximas dosis
+            <i class="fa-solid fa-calendar-check"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- MODELO 3D -->
+      <div class="model-area">
+
+        <model-viewer
+          src="assets/covid_vaccine.glb"
+          alt="Modelo 3D de vacuna"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1.1"
+          camera-orbit="35deg 70deg 4.2m"
+        >
+        </model-viewer>
+
+      </div>
+
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-grid" id="statsContainer"></section>
+
+    <!-- FUNCIONES -->
+    <section class="glass-card section-block">
+
+      <div class="section-title">
+        <h2>
+          <i class="fa-solid fa-circle-info"></i>
+          ¿Qué hace el sistema?
+        </h2>
+      </div>
+
+      <div class="features-grid">
+
+        <article class="feature-card">
+          <i class="fa-solid fa-user-lock"></i>
+
+          <h3>Perfil del usuario</h3>
+
+          <p>
+            Permite visualizar información general del usuario
+            sin depender de una cartilla física.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <i class="fa-solid fa-clipboard-list"></i>
+
+          <h3>Historial digital</h3>
+
+          <p>
+            Organiza vacunas aplicadas, fechas,
+            dosis y estado de seguimiento.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <i class="fa-solid fa-bell"></i>
+
+          <h3>Recordatorios</h3>
+
+          <p>
+            Muestra próximas dosis para evitar
+            retrasos u omisiones.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTÓN SOPORTE -->
+  <a href="pages/contacto.html" class="support-btn">
+    <i class="fa-solid fa-headset"></i>
+    Soporte
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      PROPOINT S.A. DE C.V.
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+
+  <!-- MENU RESPONSIVE -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+    }
+  </script>
+
+</body>
+
+</html>

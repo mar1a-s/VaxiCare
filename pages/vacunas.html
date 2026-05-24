@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacunas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+
+      <!-- Logo y nombre de la página -->
+      <a href="../index.html" class="brand">
+
+        <!-- Icono -->
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <!-- Nombre -->
+        <span>VaxiCare</span>
+      </a>
+
+      <!-- Menú principal -->
+      <nav class="nav-links">
+
+        <!-- Enlaces de navegación -->
+        <a href="../index.html">Inicio</a>
+
+        <a href="historial.html">Historial</a>
+
+        <a href="recordatorios.html">Recordatorios</a>
+
+        <!-- Página actual -->
+        <a class="active" href="vacunas.html">Vacunas</a>
+
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <!-- Botón para cambiar el tema -->
+      <button class="theme-btn" id="themeBtn">
+
+        <!-- Icono -->
+        <i class="fa-solid fa-moon"></i>
+
+        <!-- Texto -->
+        <span> Modo</span>
+      </button>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-layout page-layout">
+
+      <!-- Tarjeta principal -->
+      <section class="glass-card section-block">
+
+        <!-- Encabezado de la sección -->
+        <div class="section-title">
+
+          <div>
+
+            <!-- Etiqueta decorativa -->
+            <span class="tag">
+
+              <!-- Icono -->
+              <i class="fa-solid fa-syringe"></i>
+
+              Catálogo
+            </span>
+
+            <!-- Título principal -->
+            <h1 class="page-title">
+              Información de vacunas
+            </h1>
+
+            <!-- Descripción -->
+            <p class="page-description">
+              Busca vacunas registradas.
+            </p>
+          </div>
+
+          <!--
+            Input para buscar vacunas.
+            type="search" ayuda a que el navegador
+            lo reconozca como buscador.
+          -->
+          <input
+            class="search-input"
+            id="searchInput"
+            type="search"
+            placeholder="Buscar vacuna..."
+          />
+        </div>
+
+        <!--
+          Contenedor donde JavaScript agregará
+          dinámicamente las tarjetas de vacunas.
+        -->
+        <div
+          class="catalog-grid"
+          id="catalogContainer"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Botón flotante de soporte -->
+    <a href="contacto.html" class="support-btn">
+
+      <!-- Icono -->
+      <i class="fa-solid fa-headset"></i>
+
+      Soporte
+    </a>
+
+    <!-- Pie de página -->
+    <footer>
+
+      <p>
+        Proyecto académico · Cartilla de Vacunación Digital · PROPOINT
+      </p>
+    </footer>
+
+    <!-- Archivo con los datos de vacunas -->
+    <script src="../js/data.js"></script>
+
+    <!-- Archivo JS general -->
+    <script src="../js/app.js"></script>
+
+    <!--
+      Archivo encargado de:
+      - Mostrar las vacunas
+      - Crear las tarjetas
+      - Realizar las búsquedas dinámicas
+    -->
+    <script src="../js/vacunas.js"></script>
+
+  </body>
+</html>

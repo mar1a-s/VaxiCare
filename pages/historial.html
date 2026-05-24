@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+
+      <!-- Logo y nombre de la página -->
+      <a href="../index.html" class="brand">
+
+        <!-- Icono -->
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <!-- Nombre -->
+        <span>VaxiCare</span>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav class="nav-links">
+
+        <!-- Enlaces entre páginas -->
+        <a href="../index.html">Inicio</a>
+
+        <!-- La clase active marca la página actual -->
+        <a class="active" href="historial.html">Historial</a>
+
+        <a href="recordatorios.html">Recordatorios</a>
+        <a href="vacunas.html">Vacunas</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <!-- Botón para cambiar tema claro/oscuro -->
+      <button class="theme-btn" id="themeBtn">
+
+        <!-- Icono -->
+        <i class="fa-solid fa-moon"></i>
+
+        <!-- Texto -->
+        <span> Modo</span>
+      </button>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-layout page-layout">
+
+      <!-- Tarjeta principal -->
+      <section class="glass-card section-block">
+
+        <!-- Encabezado de la sección -->
+        <div class="section-title">
+
+          <div>
+
+            <!-- Etiqueta decorativa -->
+            <span class="tag">
+
+              <i class="fa-solid fa-clipboard-list"></i>
+
+              Consulta dinámica
+            </span>
+
+            <!-- Título -->
+            <h1 class="page-title">
+              Historial de vacunas
+            </h1>
+
+            <!-- Descripción -->
+            <p class="page-description">
+
+              Filtra las vacunas por estado usando DOM.
+            </p>
+          </div>
+
+          <!-- Botones de filtrado -->
+          <div class="filters">
+
+            <!--
+              Este botón muestra todas las vacunas.
+              data-filter se usa en JS para identificar el filtro.
+            -->
+            <button
+              class="filter-btn active"
+              data-filter="todas"
+            >
+              Todas
+            </button>
+
+            <!-- Botón para vacunas aplicadas -->
+            <button
+              class="filter-btn"
+              data-filter="aplicada"
+            >
+              Aplicadas
+            </button>
+
+            <!-- Botón para vacunas pendientes -->
+            <button
+              class="filter-btn"
+              data-filter="pendiente"
+            >
+              Pendientes
+            </button>
+          </div>
+        </div>
+
+        <!-- Contenedor de la tabla -->
+        <div class="table-wrapper">
+
+          <!-- Tabla del historial -->
+          <table>
+
+            <!-- Encabezados -->
+            <thead>
+              <tr>
+
+                <th>Vacuna</th>
+
+                <th>Fecha aplicada</th>
+
+                <th>Dosis</th>
+
+                <th>Próxima dosis</th>
+
+                <th>Estado</th>
+              </tr>
+            </thead>
+
+            <!--
+              El tbody está vacío porque las filas
+              se generan dinámicamente con JavaScript.
+            -->
+            <tbody id="vaccinesTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Botón flotante de soporte -->
+    <a href="contacto.html" class="support-btn">
+
+      <i class="fa-solid fa-headset"></i>
+
+      Soporte
+    </a>
+
+    <!-- Pie de página -->
+    <footer>
+
+      <p>
+        Proyecto académico · Cartilla de Vacunación Digital · PROPOINT
+      </p>
+    </footer>
+
+    <!-- Archivo donde están los datos -->
+    <script src="../js/data.js"></script>
+
+    <!-- JS general del proyecto -->
+    <script src="../js/app.js"></script>
+
+    <!--
+      JS encargado del historial:
+      genera la tabla y aplica los filtros.
+    -->
+    <script src="../js/historial.js"></script>
+
+  </body>
+</html>
